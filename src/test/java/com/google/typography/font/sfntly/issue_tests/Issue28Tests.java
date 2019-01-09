@@ -51,12 +51,11 @@ public class Issue28Tests {
     byte[] data = readToByteArray(TestFont.TestFontNames.ROBOTO.getPath());
     Font byteFont = factory.loadFonts(data)[0];
 
+    Font streamFont;
     try (InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream(TestFont.TestFontNames.ROBOTO.getPath())) {
-      Font streamFont;
       streamFont = factory.loadFonts(is)[0];
     }
 
-    
     // first test for byte array sourced font
     {
       boolean thrown = false;
