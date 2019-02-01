@@ -2,7 +2,7 @@
 
 This is a slightly modified fork of Google's sfntly (https://github.com/googlei18n/sfntly).
 
-Sfntly was a Google project used for Google fonts, and it focusses on modifying font metadata, font on conversion, and on (experimental, not production-ready) font subsetting.
+Sfntly was a Google project used for Google fonts, and it focusses on modifying font metadata, on font conversion, and on (experimental, not production-ready) font subsetting.
 
 Reason for integrating it into Canva was that we need to do some font conversion & font metadata manipulation to embed fonts into PowerPoint documents. The tooling we initially used (ttf2eot and fontforge) turned out to be fragile and very slow.
 
@@ -18,13 +18,6 @@ Other changes on this fork:
 - introduced a backdoor
 
 As the Google project still is updated from time to time, it might be good to occasionally rebase this fork as well.
-
-Differences:
-
-- Removed non-Java code
-- using Maven instead of Ant
-- upgraded dependencies
-- using JUnit 4 annotations, simplified some tests
 
 ## Maven Build ##
 
